@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+            text-align: center;
+            background-color: #e3d5c9; /* Biscuit color background */
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+            text-align: left;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            position: relative;
+            animation: border-animation 1.5s infinite alternate;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+        input[type="submit"]::before {
+            content: "♥";
+            position: absolute;
+            top: -20px;
+            left: -25px;
+            font-size: 30px;
+            color: red;
+            animation: bounce 1s infinite;
+        }
+        input[type="submit"]:hover::before {
+            color: darkred;
+        }
+        @keyframes border-animation {
+            0% { box-shadow: 0 0 20px blue; }
+            50% { box-shadow: 0 0 25px green; }
+            100% { box-shadow: 0 0 30px black; }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        footer {
+            margin-top: 80px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="/action_page.php" method="POST">
+            <fieldset>
+                <legend>Signup Form</legend>
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="full_name" placeholder="Enter your full name" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 1234567890" required pattern="[0-9]{10}">
+
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm_password">Re-Enter Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <footer>&copy; 2025 Ice Creams. All Rights Reserved.</footer>
+
+</body>
+</html>
