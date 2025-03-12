@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -208,3 +209,215 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Creams</title>
+    <style>
+        body {
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+            text-align: center;
+            background-color: #e3d5c9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            margin-top: 20px;
+            background-color: black;
+            padding: 10px 0;
+        }
+        .navbar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+        .btn {
+            font-size: 20px;
+            background-color: red;
+            padding: 15px 35px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+            position: relative;
+            animation: border-animation 1.5s infinite alternate;
+        }
+        .btn:hover {
+            background-color: darkred;
+        }
+        .btn::before {
+            content: "♥";
+            position: absolute;
+            top: -20px;
+            left: -25px;
+            font-size: 30px;
+            color: red;
+            animation: bounce 1s infinite;
+        }
+        .btn:hover::before {
+            color: darkred;
+        }
+        @keyframes border-animation {
+            0% { box-shadow: 0 0 20px blue; }
+            50% { box-shadow: 0 0 25px green; }
+            100% { box-shadow: 0 0 30px black; }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Updated Logo Size */
+        .logo {
+            width: 400px; /* Set the width */
+            height: 250px; /* Set the height */
+            position: relative;
+            margin: 40px auto;
+        }
+
+        .logo img {
+            width: 100%; /* Ensures it takes up full width of .logo */
+            height: 100%; /* Set to fill the height */
+            object-fit: contain; /* Maintain aspect ratio and prevent distortion */
+        }
+
+        /* Moving Heart */
+        .moving-heart {
+            position: absolute;
+            top: 250px; /* Adjusted to move below the larger logo */
+            left: -50px;
+            font-size: 50px;
+            animation: moveHeart 5s linear infinite;
+            margin-bottom: 50px;
+        }
+
+        @keyframes moveHeart {
+            0% {
+                left: -50px;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .flavors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-items: center;
+            margin: 60px auto;
+            max-width: 900px;
+        }
+        .flavors img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transform-origin: center;
+            animation: zoom-animation 12s infinite;
+        }
+        .flavors img:nth-child(1) { animation: zoom-animation 12s infinite 0s; }
+        .flavors img:nth-child(2) { animation: zoom-animation 12s infinite 2s; }
+        .flavors img:nth-child(3) { animation: zoom-animation 12s infinite 4s; }
+        .flavors img:nth-child(4) { animation: zoom-animation 12s infinite 6s; }
+        .flavors img:nth-child(5) { animation: zoom-animation 12s infinite 8s; }
+        .flavors img:nth-child(6) { animation: zoom-animation 12s infinite 10s; }
+
+        @keyframes zoom-animation {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.5); }
+            50% { transform: scale(1); }
+        }
+
+        footer {
+            margin-top: 80px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+
+        h1, h2, p {
+            font-family: "Fantasy", cursive;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo">
+    <img src="./images/Adobe Express - file.png" alt="Ice Cream Logo">
+</div>
+
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+</div>
+
+<div class="moving-heart">
+    <span>❤️</span>
+</div>
+
+<h1 style="font-size: 50px;">A New Adventure in Ice Cream</h1>
+
+<p style="font-size: 20px; line-height: 30px; margin-bottom: 50px;">
+    We are committed to promoting racial equity throughout our business. <br>
+    Our company values diversity and inclusion, aiming to create opportunities <br>
+    for all individuals regardless of background.
+</p>
+
+<div>
+    <a class="btn" href="Read More.html" target="_self">Read More</a>
+</div>
+
+<hr>
+
+<h2 style="font-size: 40px;">Online Services</h2>
+
+<p style="font-size: 20px; line-height: 30px;">
+    We offer online services for our customers! <br>
+    Register on our website to explore more options.
+</p>
+
+<div>
+    <p style="font-size: 18px;">Don't have an account? <b>Sign Up</b> now:</p>
+    <a class="btn" href="signup form.html">Sign Up</a>
+
+    <p style="font-size: 18px; margin-top: 20px;">Already have an account? <b>Sign In</b> here:</p>
+    <a class="btn" href="SignIn form.html">Sign In</a>
+</div>
+
+<h2 style="font-size: 40px; margin-bottom: 50px;">Our Ice Cream Flavors</h2>
+
+<div class="flavors">
+    <img src="./images/vennela ice cream.jpg" alt="Vanilla Ice Cream">
+    <img src="./images/strawberry ice cream.jpg" alt="Strawberry Ice Cream">
+    <img src="./images/chocolate ice cream.jpg" alt="Chocolate Ice Cream">
+    <img src="./images/mint-chip-ice-cream.png" alt="Mint Ice Cream">
+    <img src="./images/Mango-Ice-Cream-9.webp" alt="Mango Ice Cream">
+    <img src="./images/cookies.jpg" alt="Cookies and Cream Ice Cream">
+</div>
+
+<footer>&copy; 2025 Ice Creams. All Rights Reserved.</footer>
+
+</body>
+</html>
+>>>>>>> bd24c4d (Initial commit)
